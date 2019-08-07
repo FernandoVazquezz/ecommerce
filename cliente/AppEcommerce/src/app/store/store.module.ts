@@ -8,7 +8,7 @@ import { Cart } from '../model/cart';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import {MatTableModule, MatSortModule} from '@angular/material';
+import {MatTableModule, MatSortModule,MatIconModule} from '@angular/material';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 
 
@@ -18,6 +18,7 @@ import { Router, ActivatedRoute, RouterModule } from '@angular/router';
     CommonModule,
     MatTableModule,
     MatSortModule,
+    MatIconModule,
     RouterModule
   ],
   exports: [

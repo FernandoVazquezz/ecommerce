@@ -2,6 +2,21 @@ table {
     width: 100%;
   }
   
-  tr.mat-footer-row {
-    font-weight: bold;
+  a.btn-primary {
+
+    color: white;
+  } 
+
+
+  .total {
+    font-size: 25px;
   }
+
+  .my-custom-scrollbar {
+    position: relative;
+    height: 350px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }

@@ -69,3 +69,4 @@ export class StoreComponent implements OnInit {
   }
   
 }
+

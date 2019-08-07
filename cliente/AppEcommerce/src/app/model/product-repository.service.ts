@@ -20,6 +20,7 @@ export class ProductRepositoryService {
       console.log(this.categories);
     });
    }
+   
 
    getProductos(productLine: string = null,productVendor: string = null,productScale: string = null) :Product[]{
     return this.products.filter((p) => (productLine == null || p.productLine === productLine) && (productVendor == null || p.productVendor === productVendor) && (productScale == null || p.productScale === productScale));

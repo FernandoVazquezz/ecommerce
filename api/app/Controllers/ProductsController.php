@@ -10,6 +10,12 @@ namespace app\Controllers;
             return json_encode($message);
         }
 
+        function getByIdProducts($request, $response){
+            $productCode = $request->getAttribute('productCode');
+            $message = $this->ProductsModel->getByIdProducts($productCode);
+            return json_encode($message);
+        }
+
         function insertProducts($request, $response){
             $product = $request->getParsedBody();
             $message = $this->ProductsModel->insertProducts($product);

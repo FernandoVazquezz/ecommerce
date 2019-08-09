@@ -17,4 +17,8 @@ export class ProductDatasourceService {
    getProducts(): any {
      return  this.httpClient.get(this.baseUrl + '/products');
    }
+
+   getByIdProducts(){
+     return this.httpClient.get(this.baseUrl + '/products/{productCode}');
+   }
 }

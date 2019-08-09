@@ -3,6 +3,40 @@
     namespace app\models;
     
     class ProductsModel extends Models {
+
+        public function getByIdProducts($productCode){
+            $result = $this->db->select('products',[
+                'productCode',
+                'productName',
+                'productLine',
+                'productScale',
+                'productVendor',
+                'productDescription',
+                'quantityInStock',
+                'buyPrice',
+                'MSRP'
+            ],[
+                "productCode" => $productCode
+            ]
+        );
+
+        if(!is_null($this->db->error()[1])){
+            return array(
+                'error' => true,
+                'description' => $this->db->error()[2]
+            );
+        } else if (empty($result)){
+            return array(
+                'notFound' => true,
+                'description' => 'The result is empty'
+            );
+        }
+        return array(
+            'success' => true,
+            'description' => 'The product were found',
+            'product' => $result
+        );
+        }
         
         public function selectProducts(){
             /*$result = $this->db->select('products', [

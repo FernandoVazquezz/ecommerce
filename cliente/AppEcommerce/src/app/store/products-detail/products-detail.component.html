@@ -1,0 +1,29 @@
+<app-nav></app-nav>
+<div class="container" *ngIf="product$ | async as product">
+
+  <div class="row">
+    <div class="col-sm-6">
+        <h3 class="card-title">{{product.productName}}</h3>
+      <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+    </div>
+    <div class="col-sm-6">
+        <h5>Price:</h5>
+        <p> {{product.MSRP | currency: 'MXN'}}</p>
+        <h5>Category:</h5>
+        <p class="card-text">{{product.productLine}}</p>
+        <h5>Scale:</h5>
+        <p class="card-text">{{product.productScale}}</p>
+        <h5>Vendor:</h5>
+        <p class="card-text">{{product.productVendor}}</p> 
+        <h5>Product description</h5>
+        <p>{{product.productDescription}}</p>
+        <h5>Quantity in Stock</h5>
+        <p>{{product.quantityInStock}}</p>
+    </div>
+    
+  </div>
+
+
+</div>
+<!-- /.container -->
+<app-footer></app-footer>

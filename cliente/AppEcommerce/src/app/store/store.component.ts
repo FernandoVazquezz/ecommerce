@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { ProductRepositoryService } from '../model/product-repository.service';
 import { Product } from '../model/product';
 import { Cart } from 'src/app/model/cart';
@@ -8,13 +8,16 @@ import { Cart } from 'src/app/model/cart';
   templateUrl: './store.component.html',
   styleUrls: ['./store.component.css']
 })
-export class StoreComponent implements OnInit {
 
+
+export class StoreComponent implements OnInit {
   public selectedScale = null;
   public selectedVendor = null;
   public selectedCategory = null;
   public productsPerPage = 12;
   public selectedPage = 1;
+
+  @Input() index: number;
 
   constructor(private productRepoService: ProductRepositoryService, public cart: Cart) { }
 

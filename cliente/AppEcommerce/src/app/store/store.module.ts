@@ -9,17 +9,20 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {MatTableModule, MatSortModule,MatIconModule} from '@angular/material';
-import { Router, ActivatedRoute, RouterModule } from '@angular/router';
+import { Router, ActivatedRoute, RouterModule, Params } from '@angular/router';
+import { ProductsDetailComponent } from './products-detail/products-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
-  declarations: [StoreComponent, NavComponent, FooterComponent, CartSummaryComponent, CartComponent, CheckoutComponent, PageNotFoundComponent],
+  declarations: [StoreComponent, NavComponent, FooterComponent, CartSummaryComponent, CartComponent, CheckoutComponent, PageNotFoundComponent, ProductsDetailComponent],
   imports: [
     CommonModule,
     MatTableModule,
     MatSortModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   exports: [
     StoreComponent,

@@ -12,10 +12,10 @@ import {MatTableModule, MatSortModule,MatIconModule} from '@angular/material';
 import { Router, ActivatedRoute, RouterModule, Params } from '@angular/router';
 import { ProductsDetailComponent } from './products-detail/products-detail.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
-  declarations: [StoreComponent, NavComponent, FooterComponent, CartSummaryComponent, CartComponent, CheckoutComponent, PageNotFoundComponent, ProductsDetailComponent],
+  declarations: [StoreComponent, NavComponent, FooterComponent, CartSummaryComponent, CartComponent, CheckoutComponent, PageNotFoundComponent, ProductsDetailComponent, OrdersComponent],
   imports: [
     CommonModule,
     MatTableModule,

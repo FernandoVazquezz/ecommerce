@@ -1,0 +1,38 @@
+<app-nav></app-nav>
+<br>
+<div class="container">
+    <h1 class="text-center" style="margin: 20px 0px"> Orders</h1>
+    
+    
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+        
+      <table  class="table table-bordered table-striped ">
+          <thead>
+              <tr>
+                <th >NUMBER</th>
+                <th >PRODUCTS</th>
+                <th >QUANTITY</th>
+                <th >PRICE</th>
+              </tr>
+             </thead>
+    <tbody>
+     <tr *ngFor="let order of orders;">
+       <td >{{order.orderNumber}}</td>
+       <td >{{order.productName}}</td>
+       <td >{{order.quantityOrdered}}</td>
+       <td >{{order.quantityOrdered * order.MSRP | currency}}</td>
+     </tr>
+     
+    </tbody>
+    </table>
+    </div>
+    
+    </div>
+<br>
+<app-footer></app-footer>
+
+
+
+
+
+

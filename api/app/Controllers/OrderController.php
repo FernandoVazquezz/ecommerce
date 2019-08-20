@@ -7,5 +7,10 @@
             $message = $this->OrderModel->insertOrder($order);
             return \json_encode($message);
         }
+
+        function selectOrders($request, $response) {
+            $message = $this->OrderModel->selectOrders();
+            return json_encode($message);
+        }
     }
 ?>

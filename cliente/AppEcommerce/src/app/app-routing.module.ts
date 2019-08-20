@@ -5,6 +5,7 @@ import { CartComponent } from './store/cart/cart.component';
 import { CheckoutComponent } from './store/checkout/checkout.component';
 import { PageNotFoundComponent } from './store/page-not-found/page-not-found.component';
 import { ProductsDetailComponent } from './store/products-detail/products-detail.component';
+import { OrdersComponent } from './store/orders/orders.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,9 @@ const routes: Routes = [
   },
   {
     path:'product/:id', component: ProductsDetailComponent
+  },
+  {
+    path: "orders", component: OrdersComponent
   },
   {
     path:'', redirectTo:'/store', pathMatch:'full'
